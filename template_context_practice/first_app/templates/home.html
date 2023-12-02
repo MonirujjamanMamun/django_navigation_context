@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <meta name="description" content="Description Goes Here" />
+  </head>
+  <body>
+    <h1>This is home page.</h1>
+    <h3>Name: {{name|capfirst}}</h3>
+    <p>Age: {{age}}</p>
+    {% for i in course %}
+    <p>Id: {{i.id}}</p>
+    <h2>Name: {{i.name}}</h2>
+    {% endfor %} {% comment %} Templatetag {% endcomment %} {{fun|join:"-"}}
+    <p>Age: {{age|add:'2'}}</p>
+    <p>{{start_course|date}}</p>
+    <p>{{""|default:"Nothig is here"}}</p>
+    <p>{{love|cut:" "}}</p>
+    <p>{{course|dictsort:'fee'}}</p>
+    {% comment %}
+    <p>{{This <em>should be</em> fun!|escape}}</p>
+    {% endcomment %}
+    <p>{{numbers|first}}</p>
+    <p>{{numbers|last}}</p>
+    <p>{{numbers|length}}</p>
+    <p>{{fun|linenumbers}}</p>
+    <p>{{love|lower}}</p>
+    <p>{{love|upper}}</p>
+    <p>{{love|title}}</p>
+    <p>{{fun|random}}</p>
+    <p>{{fun|slice:'2'}}</p>
+    <p>{{love|truncatechars:'7'}}</p>
+  </body>
+</html>
